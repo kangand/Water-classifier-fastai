@@ -21,12 +21,9 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 
+classes = ['bracelet','earrings','necklace','ring']
+learn = squeezenet_model.pkl
 
-path = Path("path")
-classes = ['cleanwater', 'dirtywater']
-data2 = ImageDataBunch.single_from_classes(path, classes, tfms=get_transforms(), size=224).normalize(imagenet_stats)
-learn = create_cnn(data2, models.resnet34)
-learn.load('stage-2')
 
 
 
