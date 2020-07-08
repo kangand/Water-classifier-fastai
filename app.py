@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 
 classes = ['bracelet','earrings','necklace','ring']
-learn = squeezenet_model.pkl
+learn = load_learner('','squeezenet_model.pkl')
 
 
 
